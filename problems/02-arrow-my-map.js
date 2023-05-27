@@ -24,13 +24,11 @@ const arrowMyMap = (array, cb) => {
   array.forEach(element => {
     newArr.push(cb(element));
   });
-  // console.log(newWord);
-  // newArr.push(newWord);
   return newArr;
 
 };
 
-const yell = word => word.toUpperCase();
+const yell = word => word.toUpperCase() + '!';
 
 let result2 = arrowMyMap(['run', 'Forrest'], yell);
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
