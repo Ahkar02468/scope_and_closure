@@ -12,7 +12,13 @@ arrowRestSum(0); // => 0
 
 const arrowRestSum = (...otherNums) => {
   // Your code here
+  let tot = 0;
+  for(let num of otherNums){
+    tot += num;
+  }
+  return tot;
 };
+console.log(arrowRestSum(3,5,6)); // => 14
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
