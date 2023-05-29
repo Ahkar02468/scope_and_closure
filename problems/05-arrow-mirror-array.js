@@ -10,7 +10,11 @@ mirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a
 
 const mirrorArray = (array) => {
   // Your code here
+  return array.concat(array.slice().reverse());
+
+
 };
+mirrorArray([1,2,3,"d"]);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = mirrorArray;
