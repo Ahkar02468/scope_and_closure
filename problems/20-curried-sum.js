@@ -44,7 +44,26 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function curriedSum(numArgs) {
   // Your code here
+  let result = 0;
+  let numbers = [];
+  return function _curriedSum(number){
+    numbers.push(number)
+    if(numbers.length === numArgs){
+      for (let i = 0; i < numbers.length; i++) {
+        result += numbers[i];
+      }
+      return result;
+    }else{
+      return _curriedSum;
+    }
+  }
 }
+
+const sum = curriedSum(4); // returns a function
+sum(5) // returns a function
+sum(20) // returns a function
+console.log(sum(30)); // returns a function
+// c?=onsole.log(sum(20)); // => returns 75
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = curriedSum;
